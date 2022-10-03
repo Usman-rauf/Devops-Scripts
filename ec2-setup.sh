@@ -16,7 +16,14 @@ nvm install node
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt update && sudo apt install yarn
-################################################
+#################INSTALL NVM 14###############################
+sudo apt install curl 
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+source ~/.profile
+nvm install 14.19.1
+nvm use 14.19.1
+###################################################
+
 npm install pm2 -g
 sudo apt update && sudo apt -y full-upgrade
 sudo apt install curl gnupg2 apt-transport-https software-properties-common ca-certificates -y
